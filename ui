@@ -145,6 +145,7 @@ end
 
 -- Usage example
 local randomString = generateRandomString(10)
+getgenv().uiname = randomString
 
 
 
