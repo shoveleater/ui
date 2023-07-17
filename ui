@@ -2271,14 +2271,3 @@ function CFAHub:CreateWindow(title, gameName, intro)
 end
 
 return CFAHub
-
-local isVisible = true
-
-
-game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
-    if gameProcessed then return end
-    if input.KeyCode == Enum.KeyCode.Return then
-        isVisible = not isVisible
-        CFAHub.Visible = isVisible
-    end
-end)
