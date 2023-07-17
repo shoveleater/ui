@@ -128,7 +128,28 @@ function CFAHub:DraggingEnabled(frame, parent)
     end)
 end
 
-local GuiName = "CFAHubPremium2022"
+-- Function to generate a random string of characters and numbers
+local function generateRandomString(length)
+  local str = ""
+  for i = 1, length do
+    local randomChar = ""
+    if math.random(1, 2) == 1 then
+      randomChar = string.char(math.random(97, 122)) -- ASCII values for lowercase letters (a-z)
+    else
+      randomChar = tostring(math.random(0, 9)) -- Numbers 0-9
+    end
+    str = str .. randomChar
+  end
+  return str
+end
+
+-- Usage example
+local randomString = generateRandomString(10)
+
+
+
+
+local GuiName = randomString
 
 function CFAHub:CreateWindow(title, gameName, intro)
     title = title or "<font color=\"#1CB2F5\">CFA Hub Premium</font>"
